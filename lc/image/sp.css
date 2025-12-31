@@ -1,0 +1,275 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body, div, pre, p, blockquote, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, th, td
+{ margin: 0; padding: 0;}
+header, footer, nav, section, article, aside
+{ display: block; margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6, small
+{ font-size: 100%; font-weight: normal; }
+ol, ul
+{ list-style: none;}
+img
+{ vertical-align: top;}
+address, caption, cite, code, dfn, em, th, var, i, b
+{ font-style: normal; font-weight: normal;}
+abbr
+{ border: none 0;}
+a, input
+{ outline: none; }
+a{
+	text-decoration: none;
+}
+input, textarea
+{ margin: 0; font-size: 100%;}
+label
+{ cursor: pointer;}
+fieldset, img
+{ border: none 0;}
+table
+{ border-collapse: collapse; border-spacing: 0; font-size: 100%;}
+caption, th
+{ text-align: left;}
+hr
+{ height: 0; border: none; }
+mark
+{ background: none; }
+q
+{ quotes: none; }
+
+
+.b_content,
+.b_global_navi,
+.b_area_box,
+.inner {
+	display: block;
+	min-height: 1%;
+}
+
+.b_content:after,
+.b_global_navi:after,
+.b_area_box:after,
+.inner:after {
+	clear: both;
+	content:".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+
+
+body {
+	font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, Arial, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+        /* font-size: 1.6rem; */
+        font-weight: 500;
+        line-height: 1.6;
+}
+img {
+	width: 70%;
+}
+
+
+#site_header {
+	position: fixed;
+	top: 0;
+	z-index: 999;
+	width: 100%;
+	background: #f0f0f0;
+	/*height: 104px;*/
+}
+	#site_header .inner {
+		display: flex;
+		margin: 0 auto;
+		padding: 5px 10px;
+	}
+		#site_header .inner .site_logo {
+			align-self: center;
+			
+		}
+		#site_header .inner .utility {
+			display: flex;
+			justify-content: flex-end;
+			flex: 1 1;
+			
+		}
+			#site_header .inner .utility li {
+				margin-right: 9px;
+			}
+				#site_header .inner .utility a {
+					display: flex;
+					flex-flow: column wrap;
+					height: 100%;
+					color: #09f;
+					justify-content: center;
+				}
+					#site_header .inner .utility a span {
+						margin: 0 auto;
+					}
+					#site_header .inner .utility a .image {
+						width: 22px;
+						height: 22px;
+					}
+					#site_header .inner .utility a .text {
+						font-size: 0.7rem;
+						font-weight: 700;
+					}
+					#site_header .inner .utility a:hover .text {
+						text-decoration: underline;
+					}
+
+
+main {
+	max-width: 780px;
+	margin: 65px auto 25px;
+	padding: 0 14px;
+	overflow: hidden;
+}
+.page_title {
+	padding: 7px 0;
+	font-size: 1.2rem;
+	font-weight: 700;
+	text-align: center;
+}
+.info_area {
+	max-width: 750px;
+	margin: 0 auto;
+	background: #f0f0f0;
+	border-radius: 10px;
+	padding: 15px 8px;
+}
+	.info_area dl {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
+		.info_area dt {
+			font-weight: bold;
+			padding-right: 1em;
+		}
+		.money_total {
+			position: relative;
+			max-width: 550px;
+			margin: 0 auto;
+			padding: 10px;
+			background: #ffffff;
+			border-radius: 10px;
+			text-align: center;
+			font-weight: bold;
+		}
+			.money_total .date {
+				margin-bottom: 10px;
+			}
+			.money_total .seikyuu {
+				position: relative;
+				/*border-radius: 10px;
+				background: #f0f0f0;
+				padding-top: 10px;*/
+			}
+				.money_total .seikyuu .situation {
+					position: absolute;
+					top: -1px;
+					left: 0;
+					padding: 2px 7px;
+					border-radius: 5px;
+					color: #fff;
+					font-size: 0.9rem;
+				}
+				.money_total .seikyuu .mikakutei {background: #fe52e0;}
+				.money_total .seikyuu .karikutei {}
+				.money_total .seikyuu .kutei {display: none;}
+
+				.money_total .seikyuu .kingaku {
+					font-size: 2rem;
+				}
+					.money_total .seikyuu .kingaku span {
+						padding-left: 10px;
+						font-size: 1.8rem;
+					}
+
+
+.month_navi {
+	margin: 2em 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+	.month_navi .inner {
+		display: flex;
+		position: relative;
+		align-items: center;
+		justify-content: center;
+		padding: 0 130px;
+	}
+	.month_navi .control {
+		font-weight: bold;
+	}
+		.month_navi .control a {
+			position: relative;
+			color: transparent;
+		}
+		.month_navi .control a:before {
+			content: "";
+			position: absolute;
+			top: 6px;
+			width: 8px;
+			height: 8px;
+			border-top: 2px solid #0099ff;
+    		border-right: 2px solid #0099ff;
+		}
+		.month_navi .control a.prev:before{
+			left: -20px;
+			transform: rotate(-135deg);
+		}
+		.month_navi .control a.next:before{
+			right: -20px;
+			transform: rotate(45deg);
+		}
+	.month_navi .pulldown {
+
+	}
+		.month_navi .pulldown select {
+			padding: 0.4em 1em;
+			font-weight: bold;
+			width: 200px;
+			cursor: pointer;
+		}
+		/*.month_navi .pulldown select:hover {
+			background: #0099ff;
+			color: #ffffff;
+		}*/
+
+.meisai_area {
+	margin-top: 20px;
+}
+	.meisai_area .kensuu {
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+	.meisai_area .kensuu span {
+		font-size: 2rem;
+	}
+
+.meisai {
+	width: 100%;
+	margin-bottom: 10em;
+}
+	.meisai th { font-weight: bold; }
+	.meisai th:first-child { width: 75%; }
+	.meisai thead td {
+		background: #000;
+		color: #fff;
+		border: 2px solid #fff;
+		text-align: center;
+	}
+	.meisai tbody td {
+		padding: 0.5em;
+		border-bottom: 1px solid #dddddd;
+	}
+	.meisai tbody td.num {
+		text-align: right;
+	}
