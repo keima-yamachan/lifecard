@@ -180,8 +180,8 @@ main {
 					font-size: 0.9rem;
 				}
 				.money_total .seikyuu .mikakutei {background: #fe52e0;}
-				.money_total .seikyuu .karikutei {}
-				.money_total .seikyuu .kutei {display: none;}
+				.money_total .seikyuu .karikakutei {background: #f4e60e; color:#000;}
+				.money_total .seikyuu .kakutei {background: #2a2af0;}
 
 				.money_total .seikyuu .kingaku {
 					font-size: 2rem;
